@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Тест: Обмін речовин та енергії (10 клас, §18)</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+    margin: 0;
+    padding: 20px;
+    color: #263238;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 30px;
+  }
+  h1 {
+    text-align: center;
+    color: #00695c;
+    border-bottom: 3px solid #26a69a;
+    padding-bottom: 10px;
+  }
+  h2 {
+    color: #00695c;
+    margin-top: 30px;
+  }
+  .info {
+    background: #fff3e0;
+    padding: 12px;
+    border-left: 5px solid #ff9800;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  .student-info {
+    background: #e1f5fe;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+  .student-info label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  .student-info input {
+    padding: 6px 10px;
+    border: 1px solid #0288d1;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 250px;
+  }
+  .question {
+    background: #f9fbe7;
+    border-left: 4px solid #8bc34a;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+  }
+  .question p {
+    font-weight: 600;
+    margin-top: 0;
+  }
+  .options label {
+    display: block;
+    padding: 6px 10px;
+    margin: 4px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.2s;
+  }
+  .options label:hover {
+    background: #dcedc8;
+  }
+  .points {
+    float: right;
+    background: #26a69a;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+  }
+  .match-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  .match-table th, .match-table td {
+    border: 1px solid #b0bec5;
+    padding: 8px;
+    text-align: left;
+  }
+  .match-table th {
+    background: #b2dfdb;
+  }
+  button {
+    background: #00796b;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 17px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: #004d40;
+  }
+  #result {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    font-size: 17px;
+  }
+  .self-eval {
+    background: #fce4ec;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+    display: none;
+  }
+  .self-eval label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+  }
+  .correct { background: #c8e6c9 !important; }
+  .wrong { background: #ffcdd2 !important; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🧬 Тест з біології (10 клас)</h1>
+<h2 style="text-align:center; border:none; margin-top:0;">Тема: «Обмін речовин та енергії – основа функціонування біологічних систем» (§18)</h2>
+
+<div class="info">
+  <strong>📌 Увага!</strong> Максимальна кількість балів — <b>12</b>. Час виконання — 25 хвилин. Уважно читайте запитання.
+</div>
+
+<div class="student-info">
+  <label>Прізвище та ім'я учня:</label>
+  <input type="text" id="studentName" placeholder="Введіть своє ПІБ" required>
+</div>
+
+<form id="testForm">
+
+  <!-- Питання 1 (1 бал) -->
+  <div class="question" data-points="1">
+    <p><span class="points">1 бал</span>1. Як називається сукупність усіх хімічних реакцій, що відбуваються в організмі?</p>
+    <div class="options">
+      <label><input type="radio" name="q1" value="a"> Гомеостаз</label>
+      <label><input type="radio" name="q1" value="b"> Метаболізм</label>
+      <label><input type="radio" name="q1" value="c"> Фотосинтез</label>
+      <label><input type="radio" name="q1" value="d"> Регенерація</label>
+    </div>
+  </div>
+
+  <!-- Питання 2 (1 бал) -->
+  <div class="question" data-points="1">
+    <p><span class="points">1 бал</span>2. Пластичний обмін (асиміляція) — це:</p>
+    <div class="options">
+      <label><input type="radio" name="q2" value="a"> Розпад речовин з вивільненням енергії</label>
+      <label><input type="radio" name="q2" value="b"> Синтез власних речовин організму з поглинанням енергії</label>
+      <label><input type="radio" name="q2" value="c"> Виведення продуктів розпаду</label>
+      <label><input type="radio" name="q2" value="d"> Поглинання кисню з навколишнього середовища</label>
+    </div>
+  </div>
+
+  <!-- Питання 3 (1 бал) -->
+  <div class="question" data-points="1">
+    <p><span class="points">1 бал</span>3. Яка молекула є універсальним переносником енергії в клітині?</p>
+    <div class="options">
+      <label><input type="radio" name="q3" value="a"> ДНК</label>
+      <label><input type="radio" name="q3" value="b"> іРНК</label>
+      <label><input type="radio" name="q3" value="c"> АТФ</label>
+      <label><input type="radio" name="q3" value="d"> Гемоглобін</label>
+    </div>
+  </div>
+
+  <!-- Питання 4 (1 бал) -->
+  <div class="question" data-points="1">
+    <p><span class="points">1 бал</span>4. Дисиміляція (енергетичний обмін) спрямована на:</p>
+    <div class="options">
+      <label><input type="radio" name="q4" value="a"> Створення нових клітин</label>
+      <label><input type="radio" name="q4" value="b"> Розщеплення речовин і вивільнення енергії</label>
+      <label><input type="radio" name="q4" value="c"> Накопичення поживних речовин</label>
+      <label><input type="radio" name="q4" value="d"> Формування тканин</label>
+    </div>
+  </div>
+
+  <!-- Питання 5 (1 бал) -->
+  <div class="question" data-points="1">
+    <p><span class="points">1 бал</span>5. Яку роль відіграють ферменти в обміні речовин?</p>
+    <div class="options">
+      <label><input type="radio" name="q5" value="a"> Є джерелом енергії</label>
+      <label><input type="radio" name="q5" value="b"> Прискорюють хімічні реакції, знижуючи енергію активації</label>
+      <label><input type="radio" name="q5" value="c"> Виконують опорну функцію</label>
+      <label><input type="radio" name="q5" value="d"> Запобігають поділу клітин</label>
+    </div>
+  </div>
+
+  <!-- Питання 6 (1 бал) -->
+  <div class="question" data-points="1">
+    <p><span class="points">1 бал</span>6. Скільки макроергічних зв'язків містить молекула АТФ?</p>
+    <div class="options">
+      <label><input type="radio" name="q6" value="a"> 1</label>
+      <label><input type="radio" name="q6" value="b"> 2</label>
+      <label><input type="radio" name="q6" value="c"> 3</label>
+      <label><input type="radio" name="q6" value="d"> 4</label>
+    </div>
+  </div>
+
+  <!-- Питання 7 (2 бали) -->
+  <div class="question" data-points="2">
+    <p><span class="points">2 бали</span>7. Оберіть <b>ТРИ</b> правильні твердження про обмін речовин:</p>
+    <div class="options">
+      <label><input type="checkbox" name="q7" value="a"> Асиміляція і дисиміляція — протилежні, але взаємопов'язані процеси</label>
+      <label><input type="checkbox" name="q7" value="b"> Обмін речовин відбувається лише на клітинному рівні</label>
+      <label><input type="checkbox" name="q7" value="c"> Енергія, що вивільняється, частково розсіюється у вигляді тепла</label>
+      <label><input type="checkbox" name="q7" value="d"> Обмін речовин є ознакою живої системи</label>
+      <label><input type="checkbox" name="q7" value="e"> У рослин обмін речовин відсутній уночі</label>
+    </div>
+  </div>
+
+  <!-- Питання 8 (2 бали) — відповідність -->
+  <div class="question" data-points="2">
+    <p><span class="points">2 бали</span>8. Установіть відповідність між процесом та його характеристикою:</p>
+    <table class="match-table">
+      <tr><th>Процес</th><th>Характеристика</th></tr>
+      <tr>
+        <td>1. Асиміляція</td>
+        <td><select name="q8_1">
+          <option value="">-- оберіть --</option>
+          <option value="А">А. Синтез речовин, поглинання енергії</option>
+          <option value="Б">Б. Розпад речовин, вивільнення енергії</option>
+          <option value="В">В. Утворення АТФ у мітохондріях</option>
+          <option value="Г">Г. Ріст і оновлення клітин</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td>2. Дисиміляція</td>
+        <td><select name="q8_2">
+          <option value="">-- оберіть --</option>
+          <option value="А">А. Синтез речовин, поглинання енергії</option>
+          <option value="Б">Б. Розпад речовин, вивільнення енергії</option>
+          <option value="В">В. Утворення АТФ у мітохондріях</option>
+          <option value="Г">Г. Ріст і оновлення клітин</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td>3. Клітинне дихання</td>
+        <td><select name="q8_3">
+          <option value="">-- оберіть --</option>
+          <option value="А">А. Синтез речовин, поглинання енергії</option>
+          <option value="Б">Б. Розпад речовин, вивільнення енергії</option>
+          <option value="В">В. Утворення АТФ у мітохондріях</option>
+          <option value="Г">Г. Ріст і оновлення клітин</option>
+        </select></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Питання 9 (2 бали) — послідовність -->
+  <div class="question" data-points="2">
+    <p><span class="points">2 бали</span>9. Установіть правильну послідовність етапів енергетичного обміну глюкози в клітині:</p>
+    <div class="options">
+      <label><input type="radio" name="q9" value="a"> Клітинне дихання → гліколіз → підготовчий етап</label>
+      <label><input type="radio" name="q9" value="b"> Підготовчий етап → гліколіз → клітинне дихання</label>
+      <label><input type="radio" name="q9" value="c"> Гліколіз → підготовчий етап → клітинне дихання</label>
+      <label><input type="radio" name="q9" value="d"> Підготовчий етап → клітинне дихання → гліколіз</label>
+    </div>
+  </div>
+
+  <button type="button" onclick="checkTest()">✅ Завершити тестування</button>
+</form>
+
+<div id="result"></div>
+
+<div class="self-eval" id="selfEval">
+  <h3>📝 Самооцінювання</h3>
+  <p>Оцініть, наскільки добре ви засвоїли тему «Обмін речовин та енергії»:</p>
+  <label><input type="radio" name="selfeval" value="high"> 🟢 Я добре розумію тему, можу пояснити її іншим</label>
+  <label><input type="radio" name="selfeval" value="mid"> 🟡 Я розумію основне, але є питання, які потрібно повторити</label>
+  <label><input type="radio" name="selfeval" value="low"> 🔴 Мені потрібно ще попрацювати над цією темою</label>
+  <p><b>Що було найскладнішим?</b></p>
+  <textarea id="reflection" rows="3" style="width:100%; padding:8px; border-radius:5px; border:1px solid #f48fb1;" placeholder="Напишіть свої враження від теми..."></textarea>
+  <br>
+  <button type="button" onclick="saveSelfEval()">💾 Зберегти самооцінювання</button>
+</div>
+
+</div>
+
+<script>
+const answers = {
+  q1: 'b',
+  q2: 'b',
+  q3: 'c',
+  q4: 'b',
+  q5: 'b',
+  q6: 'b',
+  q7: ['a','c','d'],
+  q8: { q8_1: 'А', q8_2: 'Б', q8_3: 'В' },
+  q9: 'b'
+};
+
+function checkTest() {
+  const name = document.getElementById('studentName').value.trim();
+  if (!name) {
+    alert('Будь ласка, введіть своє прізвище та ім\'я!');
+    return;
+  }
+
+  let total = 0;
+
+  // Питання 1-6 (по 1 балу)
+  for (let i = 1; i <= 6; i++) {
+    const sel = document.querySelector(`input[name="q${i}"]:checked`);
+    const qDiv = document.querySelector(`input[name="q${i}"]`).closest('.question');
+    if (sel && sel.value === answers[`q${i}`]) {
+      total += 1;
+      qDiv.classList.add('correct');
+    } else {
+      qDiv.classList.add('wrong');
+    }
+  }
+
+  // Питання 7 (2 бали)
+  const q7sel = document.querySelectorAll('input[name="q7"]:checked');
+  const q7vals = Array.from(q7sel).map(x => x.value).sort();
+  const q7correct = [...answers.q7].sort();
+  const q7div = document.querySelector('input[name="q7"]').closest('.question');
+  if (JSON.stringify(q7vals) === JSON.stringify(q7correct)) {
+    total += 2;
+    q7div.classList.add('correct');
+  } else {
+    q7div.classList.add('wrong');
+  }
+
+  // Питання 8 (2 бали — по 0.67 за кожну правильну відповідь, округлимо: 2 бали якщо всі 3 вірні, 1 — якщо 2 вірні)
+  let q8score = 0;
+  for (const key in answers.q8) {
+    const sel = document.querySelector(`select[name="${key}"]`);
+    if (sel.value === answers.q8[key]) q8score++;
+  }
+  const q8div = document.querySelector('select[name="q8_1"]').closest('.question');
+  if (q8score === 3) { total += 2; q8div.classList.add('correct'); }
+  else if (q8score === 2) { total += 1; q8div.classList.add('wrong'); }
+  else { q8div.classList.add('wrong'); }
+
+  // Питання 9 (2 бали)
+  const q9sel = document.querySelector('input[name="q9"]:checked');
+  const q9div = document.querySelector('input[name="q9"]').closest('.question');
+  if (q9sel && q9sel.value === answers.q9) {
+    total += 2;
+    q9div.classList.add('correct');
+  } else {
+    q9div.classList.add('wrong');
+  }
+
+  // Визначення оцінки
+  let grade = '';
+  let color = '';
+  if (total >= 11) { grade = '12 (високий рівень)'; color = '#2e7d32'; }
+  else if (total >= 9) { grade = '10–11 (достатній рівень)'; color = '#558b2f'; }
+  else if (total >= 7) { grade = '7–9 (середній рівень)'; color = '#f9a825'; }
+  else if (total >= 4) { grade = '4–6 (початковий–середній)'; color = '#ef6c00'; }
+  else { grade = '1–3 (потрібно повторити тему)'; color = '#c62828'; }
+
+  const result = document.getElementById('result');
+  result.style.display = 'block';
+  result.style.background = '#e8f5e9';
+  result.style.borderLeft = `6px solid ${color}`;
+  result.innerHTML = `
+    <h3 style="color:${color};">🎉 Тест завершено!</h3>
+    <p><b>Учень(учениця):</b> ${name}</p>
+    <p><b>Кількість балів:</b> ${total} з 12</p>
+    <p><b>Орієнтовна оцінка:</b> ${grade}</p>
+    <p style="margin-top:15px;">
+      <span style="color:#2e7d32;">🟢 Зелені блоки</span> — правильні відповіді.<br>
+      <span style="color:#c62828;">🔴 Червоні блоки</span> — відповіді, які потрібно повторити.
+    </p>
+  `;
+
+  document.getElementById('selfEval').style.display = 'block';
+  document.getElementById('selfEval').scrollIntoView({ behavior: 'smooth' });
+}
+
+function saveSelfEval() {
+  const evalChoice = document.querySelector('input[name="selfeval"]:checked');
+  const reflection = document.getElementById('reflection').value;
+  if (!evalChoice) {
+    alert('Оберіть один із варіантів самооцінювання.');
+    return;
+  }
+  alert('✅ Дякуємо! Ваше самооцінювання та враження збережено.\n\nУспіхів у вивченні біології! 🌱');
+}
+</script>
+
+</body>
+</html>
